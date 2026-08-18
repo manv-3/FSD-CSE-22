@@ -1,7 +1,19 @@
 function addParagraph(){
     const para=document.createElement("p");
-    para.inerText="this is the new paragraph";
+    para.innerText="this is the new paragraph";
     para.style.color="red";
     const el=document.getElementById("para");
     el.appendChild(para);
+}
+
+function removePara(){
+const el=document.querySelector("p");
+const parent=document.getElementById("para");
+parent.removeChild(el);
+}
+
+function removeallPara(){
+    const el=document.querySelectorAll("p");
+    const para= document.getElementById("para");
+    para.remove(para);
 }
